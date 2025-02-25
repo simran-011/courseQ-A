@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ch3 assign</title>
+  </head>
+  <style>
+    * {
+        text-align: center;
+    }
+
+    #main-topic {
+        color: blue;
+    }
+
+
+    h1,h3,h5 {
+        font-family:  georgia;
+    }
+
+
+    p {
+        color: white;
+        background-color: cornflowerblue;
+    }
+
+
+    div>button {
+        background-color: purple;
+        color: azure;
+    }
+
+
+    button:hover {
+        background-color: yellow;
+        color: blue;
+    }
+
+    p:nth-of-type(2n+1) {
+        color: yellow;
+    }
+
+
+    h1::first-letter {
+        color: red;
+    }
+
+    input[type]:checked+label {
+        color: darkgreen;
+    }
+  </style>
+  <body>
+    <h1 id="main-topic">CSS practice</h1>
+    <h3>Lets learn about selectors</h3>
+    <!-- paragraph 1-->
+    <p>there are multiple selectors in css</p>
+    <!-- paragraph 2-->
+    <p>some of them include class selectors, id selectors etc</p>
+    <!-- paragraph 3-->
+    <p>and we can also combine this too</p>
+    <div>
+      <h5>did you like the practice set?</h5>
+      <input type="checkbox" id="yes" />
+      <label for="yes">yes </label>
+      <br />
+      <button>leran next!</button>
+    </div>
+  </body>
+</html>

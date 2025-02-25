@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Chapter2</title>
+  </head>
+
+  <style>
+    * {
+        font-family: 'Courier New';
+    }
+
+    h1,h3 {
+        color: brown;
+    }
+
+    #login {
+        background-color: white;
+
+    }
+
+    #signup {
+        background-color: brown;
+        color: white;
+    }
+
+
+    .upvote {
+        background-color: aqua;
+        color: black;
+    }
+    
+
+    /*decendent combinator*/
+    .post a {
+        color: purple;
+        background-color: yellow;
+    }
+
+     
+    p+h3 {
+        text-decoration: rgb(10, 211, 70) underline;
+    }
+
+    /* sibling operator*/
+    .upvote+button {
+        background-color: rgb(63, 202, 202);
+    }
+
+
+    /* child combinator*/
+    div>input {
+        background-color: darkseagreen;
+    }
+
+    /* attribute selector*/
+    input[type="text"] {
+        
+        color: brown;
+    }
+
+    input[type="password"] {
+        color: chartreuse;
+        
+    }
+
+    input[type] {
+        background-color: azure;
+    }
+
+    /* pseudo class*/ 
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        button:active {
+            background-color: darkblue;
+            color: white;
+        }
+
+        input[type="radio"]:checked+label {
+              font-weight: bold;
+              color: brown;
+        }
+
+        /* nth type pseudo class*/ 
+        div:nth-of-type(2n) {
+            background-color: rgb(240, 214, 182);
+        }
+
+        /*pseudo element*/
+        .para::first-line {
+            color: darkblue;
+            font-weight: bolder;
+        }
+
+        p::selection {
+            background-color: rgb(126, 240, 109);
+        }
+
+        
+    
+  </style>
+  <body>
+    <header>
+        <h1>Quora 
+            <button id="login">Log in</button>
+            <button id="signup">Sign up</button>
+        </h1>
+        <div>
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="password">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/following">Following</a></li>
+                <li><a href="/answer">Answer</a></li>
+                <li><a href="/spaces">Spaces</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <div>
+        <p class="post">
+        Adam &nbsp;&nbsp;
+        <a class="follow" href="/adam">Follow /abc</a></span>
+        </p>
+        <h3>What is the highest salary for a spacex engineer?</h3>
+        <span>
+            <button class="upvote">+upvote</button>
+            <button>answer</button>
+        </span>
+    </div>
+        <hr />
+         
+
+        <div>
+        <p class="post">
+        Bob &nbsp;&nbsp;
+        <a class="follow" href="/bob">Follow xyz</a>
+        </p>
+        <h3>What is the syllabus for JEE 2024?</h3>
+        <span>
+            <button  class="upvote">+upvote</button>
+            <button>answer</button>
+        </span>
+    </div>
+        <hr />
+         <div>
+        <p class="post">
+        Catlyn &nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="follow" href="/catlyn">Follow pqr</a>
+        </p>
+        <h3>Why is the sky blue?</h3>
+        <span>
+            <button class="upvote">+upvote</button>
+            <button>answer</button>
+        </span>
+    </div>
+        <hr />
+         <div>
+        <p class="post">
+            Dan &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="follow" href="/dan">Follow pqr</a>
+            </p>
+            <h3>Why is the sky blue?</h3>
+            <span>
+                <button class="upvote">+upvote</button>
+                <button>answer</button>
+            </span>
+        </div>
+            <hr />
+
+            <p>
+                follow us on google also <a href="www.google.com">google</a>
+            </p>
+
+            <input type="radio" id="yes" name="agreement"> 
+            <label for="yes">yes</label>
+            <input type="radio" id="no" name="agreement">
+            <label for="no">no</label>
+
+            <p class="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatem doloremque, pariatur, quos asperiores nulla similique fugiat amet laborum adipisci veniam minima dolor, soluta architecto explicabo blanditiis quod fugit. Provident.
+            </p>
+    </main>
+  </body>
+</html>
